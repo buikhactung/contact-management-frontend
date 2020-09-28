@@ -24,7 +24,7 @@ export class AppComponent implements OnInit{
   searchUser: SearchUser = new class implements SearchUser {
     name: string;
   };
-  displayedColumns = ['name', 'action'];
+  displayedColumns = ['name', 'phoneNumber', 'action'];
 
   dataSource: MatTableDataSource<User>;
 
@@ -45,7 +45,10 @@ export class AppComponent implements OnInit{
   applyFilter(event) {
     let filterValue = event.target.value.trim(); // Remove whitespace
     filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
-    this.dataSource = new MatTableDataSource<User>(this.listUser.filter(user => (user.firstName + ' ' + user.lastName).toLowerCase().includes(filterValue.trim())));
+    this.dataSource = new MatTableDataSource<User>(this.listUser.filter(user => (
+        user.firstName + ' ' + user.lastName).toLowerCase().includes(filterValue.trim()) || user.phoneNumber.includes(filterValue.trim())
+        )
+    );
     this.dataSource.paginator = this.paginator;
   }
 

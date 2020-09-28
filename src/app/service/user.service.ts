@@ -9,7 +9,7 @@ import {DataResponse} from '../model/data-response';
   providedIn: 'root'
 })
 export class UserService {
-  API_URL = "http://localhost:5000/api/users";
+  API_URL = "https://management-contact.herokuapp.com/api/users";
   constructor(private httpClient: HttpClient) { }
 
   getAll(searchUser: SearchUser): Observable<DataResponse>{

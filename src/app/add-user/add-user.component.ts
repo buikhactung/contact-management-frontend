@@ -38,10 +38,10 @@ export class AddUserComponent implements OnInit {
   editContact() {
     if (this.validate()) {
       this.userService.editUser(this.data).subscribe(data => {
-        this.toastrService.success('Add Success');
+        this.toastrService.success('Update Success');
         this.dialogRef.close();
       }, error => {
-        this.toastrService.error('Add Error');
+        this.toastrService.error('Update Error');
         this.dialogRef.close();
       });
     }

@@ -1,5 +1,5 @@
 # contact-management-frontend
-chạy dự án angular bằng lệnh `ng serve`
+chạy dự án angular bằng lệnh `ng serve` <br>
 các chức năng chính: + Tìm kiếm theo tên liên lạc hoặc số điện thoại
                      +  Click vào nút button Add Contact để hiển thị popup thêm mới liên hệ,các trường có đánh dấu * là đã được validate, click Save để lưu hoặc Close để hủy bỏ. Khi lưu thành công tự động đóng popup và load lại danh sách liên hệ đồng thời có sắp xếp theo thứ tự bảng mã ASCII
                      + Click vào 1 dòng bất kỳ để xem detail của liên hệ đó, sau đó click Close để đóng popup trở về màn hình list liên hệ
